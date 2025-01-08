@@ -142,3 +142,22 @@ mybutton.addEventListener("click",function(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+const filterButtons = document.querySelectorAll('.filter-button');
+const projectItems = document.querySelectorAll('.project-item');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+    // Loop melalui semua item galeri
+    projectItems.forEach(item => {
+      // Tampilkan atau sembunyikan item berdasarkan kategori
+      if (filter === 'all' || item.classList.contains(filter)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+});
