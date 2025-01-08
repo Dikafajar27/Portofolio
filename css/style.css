@@ -388,3 +388,84 @@ footer .link-group a:hover{
     color: #fff;
     animation: pulse 3s infinite;
 }
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .project-item {
+    width: 30%; /* Atur lebar item proyek */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .hidden {
+    display: none; /* Kelas untuk menyembunyikan item */
+  }
+  
+  .project-filter {
+    margin-bottom: 20px;
+  }
+  
+  .project-filter {
+    text-align: center; /* Mengatur teks di dalam kontainer menjadi tengah */
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons-container {
+    display: inline-block; /* Mengatur kontainer tombol menjadi inline-block */
+  }
+
+  /* Style untuk galeri */
+.portfolio-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
+
+.portfolio-item {
+	position: relative;
+	overflow: hidden;
+	width: 30%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.portfolio-item.hidden {
+	opacity: 0;
+	transform: scale(0.8);
+	display: none !important;
+}
+
+/* Style tombol filter */
+.filter-btn {
+	padding: 10px 20px;
+	margin: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+	background-color: #0056b3;
+	transform: scale(1.1);
+}
+
+.filter-btn.active {
+	background-color: #0056b3;
+	font-weight: bold;
+}
